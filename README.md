@@ -7,35 +7,21 @@ You can execute a script named 'run_analysis.R' in main directory.
 And this script generates txt file named 'tidyData.txt' in 'result' directory.
 This is a result file to submit on web page.
 
-This script consists of 6 parts.
+##how to run the code
+I uploaded my whole work directory.
+You can execute a script named *'run_analysis.R'* in main directory.
+This script need file structure like repository(include files). Maybe you just download zip file and unzip on *'data directory'*. or you can change a directory name of 'data'. and just reset a variable named `dataDir` to your directory name in the code.
+And this script generates txt file named 'tidyData.txt' in 'result' directory.
+This is a result file to submit on web page.
 
-0. load the data and prepare to clean it
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names.
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+##Data Information
 
-I wrote detail comments on the script. And you can chase each step started with '##'
+you can get information about data set - [click here][url1]
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+Check the README.txt file for further details about this dataset. 
 
 
-## Description of variable and function
-1. activity : table contains activity names. it helps a user to name the activities in the dataset.
-2. data.1.merged : 1st data set merged two data set.
-3. data.2.filtered : 2nd data set filtered only measurement about mean and standard deviation.
-4. data.3.named : 3rd data set to change values of  activitie column to descriptive activity name.
-5. data.4.rename : 4th data set to rename columns' title from meaningless column name like 'V1', 'V2'.
-6. data.5.tidy : 5th data set for independent tidy data set.
-7. feat : Feature name
-8. testIds : Identifier of test dataset
-9. testLabel : activity code of test data set. It can be interpreted by 'activity' dataset
-10. testSet : test data set
-11. trainIds : Identifier of train  dataset
-12. trainLabel : activity code of train data set. It can be interpreted by 'activity' dataset
-13. trainSet : train data set
-15. column.names : a vector of whole column name set.
-16. column.names2 : a vector of extracted column name set.
-17. dataDir : a directory include data files.
-18. pattern : a regular expression pattern for extract the measurement on the mean and standard deviation.
-19. getActivityName : a function that returns activity name. A parameter is activity code of record.
-20. makeActivityList : returns a column that consist of activity name.
+[url1][http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]
